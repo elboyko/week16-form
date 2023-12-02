@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/normalize.css">
+   <link rel="stylesheet" href="./assets/style.css">
+   <title>
+      <week16-form></week16-form>
+   </title>
+</head>
+
+<body>
+   <div class="container">
+      <h1>Форма регистрации</h1>
+
+      <form action="" id="form" name="form" novalidate>
+         <div class="name">
+            <input class="form__name" type="text" name="name" placeholder="Введите ваше имя" minlength="2"
+               maxlength="20" required>
+            <span class="error-massage" id="name-error"></span>
+         </div>
+         <div class="email">
+            <input class="form__email" type="email" name="email" placeholder="Введите ваш Email" required>
+            <span class="error-massage" id="email-error"></span>
+         </div>
+         <div class="age">
+            <input class="form__age" type="number" name="age" placeholder="Введите ваш возраст" required>
+            <span class="error-massage" id="age-error"></span>
+         </div>
+         <div class="gender">
+            <div class="men">
+               <label for="men">Мужчина</label>
+               <input type="radio" name="gender" id="men">
+            </div>
+            <div class="woman">
+               <label for="woman">Женщина</label>
+               <input type="radio" name="gender" id="woman">
+            </div>
+         </div>
+         <div class="professions">
+            <label for="profession">Выберите вашу профессию</label>
+            <select class="form__select" name="profession" id="" required>
+               <option value="Врач">Врач</option>
+               <option value="Программист">Программист</option>
+               <option value="Учитель">Учитель</option>
+               <option value="Дизайнер">Дизайнер</option>
+               <option value="Инженер">Инженер</option>
+               <option value="Продавец">Продавец</option>
+            </select>
+         </div>
+         <div class="password">
+            <input class="form__pass" id="password" type="password" required placeholder="Введите ваш пароль">
+            <span class="error-massage" id="password-error"></span>
+            <input class="form__pass2" id="password-return" type="password" required placeholder="Повторите пароль">
+            <span class="error-massage" id="password2-error"></span>
+         </div>
+
+         <div class="agree">
+            <input type="radio" name="agree" id="agree">
+            <label for="agree">Я согласен с обработкой моих данных</label>
+         </div>
+         <button type="submit">Отправить</button>
+   </div>
+   <div class="errorsInfo"></div>
+   </form>
+
+
+
+
+   <script src="./script.js"></script>
+</body>
+
+</html>
