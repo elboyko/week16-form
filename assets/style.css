@@ -71,3 +71,11 @@ button {
 ::placeholder {
    color: #0cb1ed;
 }
+
+.red__line {
+   border: 2px solid red;
+}
+
+input:required:valid {
+   border: 3px solid rgb(13, 240, 13);
+}

@@ -18,16 +18,17 @@
 
       <form action="" id="form" name="form" novalidate>
          <div class="name">
-            <input class="form__name" type="text" name="name" placeholder="Введите ваше имя" minlength="2"
-               maxlength="20" required>
-            <span class="error-massage" id="name-error"></span>
+            <input class="form__name" type="text" name="name" placeholder="Введите ваше имя *" minlength="2"
+               maxlength="20" pattern="^[a-zA-ZА-Яа-я]+$" required>
+            <span class=" error-name" id="name-error"></span>
+            <span class="error-name2"></span>
          </div>
          <div class="email">
-            <input class="form__email" type="email" name="email" placeholder="Введите ваш Email" required>
-            <span class="error-massage" id="email-error"></span>
+            <input class="form__email" type="email" name="email" placeholder="Введите ваш Email *" required>
+            <span class="error-mail" id="email-error"></span>
          </div>
          <div class="age">
-            <input class="form__age" type="number" name="age" placeholder="Введите ваш возраст" required>
+            <input class="form__age" type="number" name="age" placeholder="Введите ваш возраст *" required>
             <span class="error-massage" id="age-error"></span>
          </div>
          <div class="gender">
@@ -41,7 +42,7 @@
             </div>
          </div>
          <div class="professions">
-            <label for="profession">Выберите вашу профессию</label>
+            <label for="profession">Выберите вашу профессию *</label>
             <select class="form__select" name="profession" id="" required>
                <option value="Врач">Врач</option>
                <option value="Программист">Программист</option>
@@ -52,9 +53,12 @@
             </select>
          </div>
          <div class="password">
-            <input class="form__pass" id="password" type="password" required placeholder="Введите ваш пароль">
-            <span class="error-massage" id="password-error"></span>
-            <input class="form__pass2" id="password-return" type="password" required placeholder="Повторите пароль">
+            <input class="form__pass" id="password" type="password" required minlength="8"
+               pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/"
+               placeholder="Введите ваш пароль *"> <span class="error-password" id="password-error"></span>
+            <input class="form__pass2" id="password-return" type="password" required minlength="8"
+               pattern="/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,20}$/"
+               placeholder="Повторите пароль *">
             <span class="error-massage" id="password2-error"></span>
          </div>
 
