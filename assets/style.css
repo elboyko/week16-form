@@ -79,3 +79,7 @@ button {
 input:required:valid {
    border: 3px solid rgb(13, 240, 13);
 }
+
+.green__line {
+   border: 2px solid rgb(79, 234, 76);
+}
